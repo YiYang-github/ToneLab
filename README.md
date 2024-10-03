@@ -4,7 +4,7 @@
 ToneLab is an inclusive and easy-to-use platform designed for lightweight documentation and quantitative analysis in Sino-Tibetan tonal languages, which comprises 2 core modules: [Tone2Vec](#tone2vec-module), [Lightweight Documentation](#lightweight-documentation).. 
 
 <div align="center">
-<img align="center" src="docs/figures/figure1.pdf" width="1000px" />
+<img align="center" src="docs/figures/figure1.PNG" width="1000px" />
 <b><br>Figure 1.</b>
 </div>
 
