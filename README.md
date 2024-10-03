@@ -1,32 +1,3 @@
-[pypi-image]: https://badge.fury.io/py/dbgym.svg
-<!-- [pypi-image]: https://img.shields.io/pypi/v/dbgym -->
-[pypi-url]: https://pypi.python.org/pypi/dbgym
-[download-image]: https://static.pepy.tech/personalized-badge/dbgym?period=total&left_color=grey&left_text=PyPI%20Download
-[download-url]: https://pepy.tech/project/dbgym
-[arxiv-image]: https://img.shields.io/badge/arXiv-2310.16837-b31b1b.svg
-[arxiv-url]: https://arxiv.org/abs/2310.16837
-[testing-image]: https://github.com/JiaxuanYou/DBGym/actions/workflows/testing.yml/badge.svg
-[testing-url]: https://github.com/JiaxuanYou/DBGym/actions/workflows/testing.yml
-[linting-image]: https://github.com/JiaxuanYou/DBGym/actions/workflows/linting.yml/badge.svg
-[linting-url]: https://github.com/JiaxuanYou/DBGym/actions/workflows/linting.yml
-[docs-image]: https://readthedocs.org/projects/dbgym/badge/?version=latest
-[docs-url]: https://dbgym.readthedocs.io/en/latest
-[license-image]: https://img.shields.io/github/license/JiaxuanYou/DBGym
-[license-url]: https://github.com/JiaxuanYou/DBGym/blob/main/LICENSE
-<div align="center">
-
-<a href="http://dbgym.readthedocs.io"><img align="center" src="docs/Logo.png" width="1000px"/>
-
-[![PyPI Version][pypi-image]][pypi-url]
-[![Downloads][download-image]][download-url]
-[![arXiv][arxiv-image]][arxiv-url]
-[![Testing Status][testing-image]][testing-url]
-[![Linting Status][linting-image]][linting-url]
-[![Docs Status][docs-image]][docs-url]
-[![GitHub license][license-image]][license-url]
-
-</div>
-
 
 # Overview
 
@@ -95,20 +66,20 @@ You may have several transcriptions for various dialects, often documented throu
 
 
 | \textbf{Dialect} | \textbf{Word 0} | \textbf{Word 1} | \textbf{...} | \textbf{Word n} |
-|:------------------|:----------------:|:----------------:|:-------------:|:----------------:|
-| 0                  | 15               | 215              |               | 52               |
-| 1                  | 55               | 15               |               | 51               |
-| 2                  | 25               | 214              |               | 53               |
-| 3                  | 14               | 312              |               | \textbf{N/A}     |
+| :--------------- | :-------------: | :-------------: | :----------: | :-------------: |
+| 0                |       15        |       215       |              |       52        |
+| 1                |       55        |       15        |              |       51        |
+| 2                |       25        |       214       |              |       53        |
+| 3                |       14        |       312       |              |  \textbf{N/A}   |
 
 
 
 | \textbf{Dialect} | \textbf{Word 0} | \textbf{Word 1} | \textbf{...} | \textbf{Word n} |
-|:------------------|:----------------:|:----------------:|:-------------:|:----------------:|
-| 0                  | t ɔ 55           | th ɔ 55          |               | t ai 31          |
-| 1                  | t o 45           | th o 45          |               | t a 213          |
-| 2                  | t o 55           | th o 55          |               | t ai 21          |
-| 3                  | t ɔ 55           | th ɔ 55          |               | t ai 21          |
+| :--------------- | :-------------: | :-------------: | :----------: | :-------------: |
+| 0                |     t ɔ 55      |     th ɔ 55     |              |     t ai 31     |
+| 1                |     t o 45      |     th o 45     |              |     t a 213     |
+| 2                |     t o 55      |     th o 55     |              |     t ai 21     |
+| 3                |     t ɔ 55      |     th ɔ 55     |              |     t ai 21     |
 
 ### 1. Usgae
 
@@ -194,12 +165,12 @@ You may have the following CSV files in your directory `database`, each represen
 
 For example, `user.csv` may look like this:
 
-| _user | x | y | time |
-| -------- | -------- | -------- | -------- |
-| 0 | 0.1 | A | 2021/01/01
-| 1 | 0.8 | A | 2022/02/01
-| 2 | 0.5 | B | 2023/05/01
-| 3 | 0.5 | **N/A** | 2024/08/01
+| _user | x   | y       | time       |
+| ----- | --- | ------- | ---------- |
+| 0     | 0.1 | A       | 2021/01/01 |
+| 1     | 0.8 | A       | 2022/02/01 |
+| 2     | 0.5 | B       | 2023/05/01 |
+| 3     | 0.5 | **N/A** | 2024/08/01 |
 
 Your goal is to **leverage the entire database** (not just the `user.csv` table) to predict the unknown **N/A** values in column `y` in `user.csv`.
 
@@ -218,11 +189,11 @@ DBGym defines a simple declarative **predictive query** to describe the predicti
 
 To solve a given predictive query, DBGym provides a variety of ML models from tabular ML to graph ML communities, including: 
 
-| DBGym data API | Model |
-| -------- | -------- |
-| Tabular | XGBoost, MLP | 
-| Graph | GCN, GraphSAGE, GIN, GAT | 
-| Heterogeneous graph | HGCN, HGT | 
+| DBGym data API      | Model                    |
+| ------------------- | ------------------------ |
+| Tabular             | XGBoost, MLP             |
+| Graph               | GCN, GraphSAGE, GIN, GAT |
+| Heterogeneous graph | HGCN, HGT                |
 
 You can also easily create your own models and register them to DBGym. We hope to integrate more ML models into DBGym, and we sincerely appreciate your pull requests!
 
